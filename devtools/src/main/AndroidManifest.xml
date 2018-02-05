@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.krishna.devtools">
+
+    <application>
+        <activity android:name=".activity.ActivityTable" />
+        <activity
+            android:name=".activity.ActivityDevTools"
+            android:label="@string/title_activity_drawer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.ActivitySharedPreference" />
+
+        <provider
+            android:name=".utils.FileProvider"
+            android:authorities="@string/provider_authority"
+            android:exported="true" />
+    </application>
+
+</manifest>
