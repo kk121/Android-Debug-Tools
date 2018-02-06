@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.krishna.debug_tools">
+
+    <application>
+        <activity android:name="com.krishna.debug_tools.activity.ActivityTable" />
+        <activity
+            android:name="com.krishna.debug_tools.activity.ActivityDebugTools"
+            android:label="@string/title_activity_drawer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.krishna.debug_tools.activity.ActivitySharedPreference" />
+
+        <provider
+            android:name="com.krishna.debug_tools.utils.FileProvider"
+            android:authorities="@string/provider_authority"
+            android:exported="true" />
+    </application>
+
+</manifest>

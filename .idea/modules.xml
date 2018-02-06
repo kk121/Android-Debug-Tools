@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DevToolsDemo.iml" filepath="$PROJECT_DIR$/DevToolsDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AndroidDebugToolsDemo.iml" filepath="$PROJECT_DIR$/AndroidDebugToolsDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/devtools/devtools.iml" filepath="$PROJECT_DIR$/devtools/devtools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/debug_tools/android_debug_tools.iml" filepath="$PROJECT_DIR$/debug_tools/android_debug_tools.iml" />
     </modules>
   </component>
 </project>

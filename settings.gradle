@@ -1,2 +1,2 @@
 include ':app'
-include ':devtools'
+include ':debug_tools'
