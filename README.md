@@ -1,5 +1,5 @@
 # Android-Debug-Tools
-[![](https://jitpack.io/v/kk121/Android-Debug-Tools.svg)](https://jitpack.io/#kk121/Android-Debug-Tools)
+[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-Android%20Debug%20Tools-green.svg?style=flat )]( https://android-arsenal.com/details/1/6828 ) [![](https://jitpack.io/v/kk121/Android-Debug-Tools.svg)](https://jitpack.io/#kk121/Android-Debug-Tools)
 <br>
 ### Android library for debugging, Sqlite Databases, SharedPreferences and all types of files stored in internal storage directory, right from the app.
 
@@ -35,7 +35,7 @@ dependencies {
 ## Using Android-Debug-Tools in your Application?
 ```sh
   //start the ActivityDebugTools activity from your activity, that's it
-  startActivity(new Intent(this, ActivityDevTools.class));
+  startActivity(new Intent(this, ActivityDebugTools.class));
 ```
 
 ## Screenshots:
