@@ -4,7 +4,6 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 /**
  * Created by krishna on 05/02/18.
@@ -31,7 +30,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public static DBHelper getInstance(Context context) {
         if (sInstance == null) {
-            sInstance = new DBHelper(context, "dummy.db", null, 1);
+            sInstance = new DBHelper(context, "dummy.db", null, 2);
         }
         return sInstance;
     }
@@ -39,25 +38,24 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_SETTINGS_TABLE);
-        ContentValues initialValues = new ContentValues();
-        initialValues.put("VOIPUSERNAME", "xxxxx");
-        initialValues.put("VOIPAUTHID", "xxxxxxxxxx");
-        initialValues.put("PASSWORD", "xxxxxx");
-        initialValues.put("VOIPDISPLAYNAME", "xxxxxxxxx");
-        initialValues.put("SIPPROXYSERVER", "xxxxxxxxxxxxx");
-        initialValues.put("SIPREGISTRAR", "xxxxxxxxxxx");
-        initialValues.put("SIPREALM", "xxxxxxxxxx");
-        initialValues.put("EXPIRESTIME", 876877587);
-        Log.d("1.6", "gets to here");
-        db.insert("tbl_settings", null, initialValues);
-
+        for (int i = 0; i < 500; i++) {
+            ContentValues initialValues = new ContentValues();
+            initialValues.put("VOIPUSERNAME", "xxxxx");
+            initialValues.put("VOIPAUTHID", "xxxxxxxxxx");
+            initialValues.put("PASSWORD", "xxxxxx");
+            initialValues.put("VOIPDISPLAYNAME", "xxxxxxxxx");
+            initialValues.put("SIPPROXYSERVER", "xxxxxxxxxxxxx");
+            initialValues.put("SIPREGISTRAR", "xxxxxxxxxxx");
+            initialValues.put("SIPREALM", "xxxxxxxxxx");
+            initialValues.put("EXPIRESTIME", 876877587);
+            db.insert("tbl_settings", null, initialValues);
+        }
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + "tbl_settings");
         onCreate(db);
-
     }
 
 }

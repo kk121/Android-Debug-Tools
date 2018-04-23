@@ -3,17 +3,19 @@
     package="com.krishna.debug_tools">
 
     <application>
-        <activity android:name="com.krishna.debug_tools.activity.ActivityTable" />
+        <activity
+            android:name="com.krishna.debug_tools.activity.ActivityTable"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.krishna.debug_tools.activity.ActivityDebugTools"
             android:label="@string/title_activity_drawer"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.krishna.debug_tools" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name="com.krishna.debug_tools.activity.ActivitySharedPreference" />
-
-        <provider
-            android:name="com.krishna.debug_tools.utils.FileProvider"
-            android:authorities="@string/provider_authority"
-            android:exported="true" />
     </application>
 
 </manifest>

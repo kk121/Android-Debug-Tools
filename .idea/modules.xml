@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidDebugToolsDemo.iml" filepath="$PROJECT_DIR$/AndroidDebugToolsDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/debug_tools/android_debug_tools.iml" filepath="$PROJECT_DIR$/debug_tools/android_debug_tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/debug_tools/debug_tools.iml" filepath="$PROJECT_DIR$/debug_tools/debug_tools.iml" />
     </modules>
   </component>
 </project>

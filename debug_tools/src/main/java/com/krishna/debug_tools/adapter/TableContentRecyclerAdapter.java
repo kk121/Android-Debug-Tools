@@ -1,6 +1,5 @@
 package com.krishna.debug_tools.adapter;
 
-import android.content.Context;
 import android.database.Cursor;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,17 +14,15 @@ import com.krishna.debug_tools.R;
 
 public class TableContentRecyclerAdapter extends RecyclerView.Adapter<TableContentViewHolder> {
     private Cursor cursor;
-    private Context context;
 
-    public TableContentRecyclerAdapter(Context context, Cursor cursor) {
-        this.context = context;
+    public TableContentRecyclerAdapter(Cursor cursor) {
         this.cursor = cursor;
     }
 
     @Override
     public TableContentViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_table_content, parent, false);
-        return new TableContentViewHolder(view);
+        return new TableContentViewHolder(view, cursor);
     }
 
     @Override
@@ -35,7 +32,7 @@ public class TableContentRecyclerAdapter extends RecyclerView.Adapter<TableConte
 
     @Override
     public int getItemCount() {
-        if (cursor != null)
+        if (cursor != null && cursor.moveToFirst())
             return cursor.getCount();
         return 0;
     }
